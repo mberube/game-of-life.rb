@@ -25,10 +25,6 @@ class Board
 		self
 	end
 
-	def live_cell_count
-		@live_cells.size
-	end
-
 	def alive?(position)
 		@live_cells[position] || false
 	end
