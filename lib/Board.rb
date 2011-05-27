@@ -19,7 +19,7 @@ class Board
 		neighbors = Neighborhood.new.neighbors(live_cell_list)
 
 		(live_cell_list+neighbors).each do |position, value|
-			next_state.live(position) if rule_engine.next_cell_live?(position, self)
+			next_state.live(position) if rule_engine.cell_will_live?(position, self)
 		end
 
 		@live_cells = next_state

@@ -1,6 +1,6 @@
 require 'Position'
 class RuleEngine
-	def next_cell_live?(position, board)
+	def cell_will_live?(position, board)
 		neighbors_count = find_live_neighbors_count(position, board)
 		return board.alive?(position) if neighbors_count == 2
 		neighbors_count == 3

@@ -15,8 +15,20 @@ describe Board do
 	it "will keep four cells alive in square position" do
 		positions = [Position.new(0,0), Position.new(1,0), Position.new(0,1), Position.new(1,1)]
 		 @board.with_live_cells(positions)
+
 		 @board.step.live_cell_list.size.should == 4
 		 @board.live_cell_list.should == positions
+
+		 @board.step.live_cell_list.size.should == 4
+		 @board.live_cell_list.should == positions
+	end
+
+	it "will keep four cells alive in square position outside of center" do
+		positions = [Position.new(10,10), Position.new(11,10), Position.new(10,11), Position.new(11,11)]
+		 @board.with_live_cells(positions)
+		 @board.step.live_cell_list.size.should == 4
+		 @board.live_cell_list.should == positions
+
 		 @board.step.live_cell_list.size.should == 4
 		 @board.live_cell_list.should == positions
 	end
