@@ -1,5 +1,7 @@
+require 'spec_helper'
 require 'rspec'
 require 'RuleEngine'
+require 'Board'
 describe RuleEngine do
 	before :each do
 		@engine = RuleEngine.new

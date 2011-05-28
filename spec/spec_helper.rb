@@ -1,0 +1,1 @@
+require 'cover_me'
